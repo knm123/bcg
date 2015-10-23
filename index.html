@@ -29,6 +29,15 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 </script>
 </head>
 <body>
+
+<!-- Szukaj -->
+<h2 class="demoHeaders">Autocomplete</h2>
+<div>
+	<input id="autocomplete" title="type &quot;a&quot;">
+</div>
+
+<h2 class="header">Client 360 View</h2>
+
 <div class="column">
 	<div class="portlet">
 		<div class="portlet-header">Adress</div>
@@ -71,6 +80,17 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 		<div class="portlet-content">Lorem ipsum dolor sit amet</div>
 	</div>
 </div>
+
+<script>
+var availableTags = [
+	"Klient1",
+	"Klient2"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+</script>
+
 <script src="lib/angular/angular.js"></script>
 <script src="js/routes.js"></script>
 <script src="js/services.js"></script>

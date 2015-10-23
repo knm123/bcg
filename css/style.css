@@ -3,6 +3,9 @@ min-width: 520px;
 font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
 font-size: 62.5%;
 }
+.header {
+font-size: 162.5%;
+}
 .column {
 width: 370px;
 float: left;
