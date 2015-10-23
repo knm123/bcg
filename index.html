@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Sortable - Portlets</title>
+<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
+<script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
+<script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script>
+$(function() {
+$( ".column" ).sortable({
+connectWith: ".column",
+handle: ".portlet-header",
+cancel: ".portlet-toggle",
+placeholder: "portlet-placeholder ui-corner-all"
+});
+$( ".portlet" )
+.addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+.find( ".portlet-header" )
+.addClass( "ui-widget-header ui-corner-all" )
+.prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+$( ".portlet-toggle" ).click(function() {
+var icon = $( this );
+icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+});
+});
+</script>
+</head>
+<body>
+<div class="column">
+	<div class="portlet">
+		<div class="portlet-header">Adress</div>
+		<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+	</div>
+	<div class="portlet">
+		<div class="portlet-header">Potential Assessment</div>
+		<div class="portlet-content"><div ng-include="'assessment.html'"/></div>
+	</div>
+</div>
+<div class="column">
+	<div class="portlet">
+		<div class="portlet-header">Key Persons</div>
+		<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+	</div>
+</div>
+<div class="column">
+	<div class="portlet">
+		<div class="portlet-header">Uproduktowienie</div>
+		<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+	</div>
+	<div class="portlet">
+		<div class="portlet-header">Images</div>
+		<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+	</div>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>
