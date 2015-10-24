@@ -35,6 +35,7 @@
 	.column .text { color: #f00 !important; }
 	.cell { font-weight: bold; }
 </style>
+    <!--
 <script>
 $(function() {
 $( ".column" ).sortable({
@@ -54,7 +55,7 @@ icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
 icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 });
 });
-</script>
+</script> -->
 </head>
 <body>
 
@@ -100,7 +101,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
             <div class="column">
                 <div class="portlet">
                     <div class="portlet-header">Address</div>
-                    <div class="portlet-content"><div ng-include="'partials/mapa/index.html'"></div></div> <!--Łęczyńska 43 Lublin -->
+                  <!--  <div class="portlet-content"><div ng-include="'partials/mapa/index.html'"></div></div>  --> <!--Łęczyńska 43 Lublin -->
                 </div>
                 <div class="portlet">
                     <div class="portlet-header">Finances</div>
@@ -164,7 +165,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
     </tr>
 </table>
 
-
+<!--
 <script>
 var availableTags = [
 	"Klient1",
@@ -174,7 +175,7 @@ $( "#autocomplete" ).autocomplete({
 	source: availableTags
 });
 </script>
-
+-->
 <script src="lib/angular/angular.js"></script>
 <script src="js/routes.js"></script>
 <script src="js/services.js"></script>
