@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <link href="lib/bootgrid/jquery.bootgrid.css" rel="stylesheet" />
-<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" /> <!-- Problem z tym stylem, jego style zastępują te ze style.css -->
+<!--<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" /> --> <!-- Problem z tym stylem, jego style zastępują te ze style.css -->
 <link rel="stylesheet" href="css/selectmenu.css"/>
 
 <style>
@@ -64,7 +64,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 
 <h2 class="header">Client 360 View</h2>
 </div>
-
+<div title="panel1">
 <div class="column">
 	<div class="portlet">
 		<div class="portlet-header">Name: LUBFARM S.A.</div>
@@ -98,37 +98,46 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 		<div class="portlet-content"><div ng-include="'table/table2.html'"></div></div>
 	</div>
 </div>
-
-
-
-
 <div class="column">
 	<div class="portlet">
-		<div class="portlet-header">Potential Assessment</div>
-		<div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
-	</div>
-	<div class="portlet">
-		<div class="portlet-header">Risk rating</div>
-		<div class="portlet-content">bla bal</div>
-	</div>
-	<div class="portlet">
-		<div class="portlet-header">Sectorial view</div>
-		<div class="portlet-content"><div ng-include="'partials/sectorialview.html'"></div></div>
+		<div class="portlet-header">Product profile</div>
+		<div class="portlet-content" style="height:400px"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
 	</div>
 </div>
-<div class="column">
-	<div class="portlet">
-		<div class="portlet-header">Uproduktowienie</div>
-		<div class="portlet-content"><!--div ng-include="'uproduktowienie.html'"</div--></div>
-	</div>
-	<div class="portlet">
-		<div class="portlet-header">Finances</div>
-		<div class="portlet-content"><div ng-include="'table/table.html'"></div></div>
-	</div>
-	<div class="portlet">
-		<div class="portlet-header">Finances ratios</div>
-		<div class="portlet-content"><div ng-include="'table/table2.html'"></div></div>
-	</div>
+</div>
+<div title="panel2">
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Advisory panel</div>
+            <div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Sectorial trends</div>
+            <div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Key selling pitches</div>
+            <div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
+        </div>
+    </div>
+</div>
+<div title="panel3">
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Key players in the market</div>
+            <div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Relationship development</div>
+            <div class="portlet-content"><!--div ng-include="'dynamicpie/pie/strona.html'"></div--></div>
+        </div>
+    </div>
 </div>
 
 <script>
