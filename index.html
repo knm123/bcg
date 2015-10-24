@@ -3,11 +3,33 @@
 <head>
 <meta charset="utf-8">
 <title>jQuery UI Sortable - Portlets</title>
-<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+<script src="js/modernizr-2.8.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="lib/bootgrid/jquery.bootgrid.js"></script>
+<script src="lib/bootgrid/jquery.bootgrid.fa.js"></script>
+<script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
+<script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/selectmenu.css"/>
+<link href="lib/bootgrid/jquery.bootgrid.css" rel="stylesheet" />
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+<style>
+	@-webkit-viewport { width: device-width; }
+	@-moz-viewport { width: device-width; }
+	@-ms-viewport { width: device-width; }
+	@-o-viewport { width: device-width; }
+	@viewport { width: device-width; }
+
+	body { padding-top: 70px; }
+
+	.column .text { color: #f00 !important; }
+	.cell { font-weight: bold; }
+</style>
 <script>
 $(function() {
 $( ".column" ).sortable({
