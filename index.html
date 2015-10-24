@@ -11,7 +11,6 @@
 <script src="lib/bootgrid/jquery.bootgrid.fa.js"></script>
 <script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
-
 <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/selectmenu.css"/>
@@ -24,9 +23,7 @@
 	@-ms-viewport { width: device-width; }
 	@-o-viewport { width: device-width; }
 	@viewport { width: device-width; }
-
 	body { padding-top: 70px; }
-
 	.column .text { color: #f00 !important; }
 	.cell { font-weight: bold; }
 </style>
@@ -49,6 +46,7 @@ icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
 icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 });
 });
+$( "#salestip" ).selectmenu();
 </script>
 </head>
 <body>
