@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>jQuery UI Sortable - Portlets</title>
 <script src="js/jquery.min.js"></script>
+<script src="jquery-ui-1.8.2/jquery.min.js"></script>
 <script src="js/jquery.cssmap.js"></script>
 <script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
@@ -15,15 +16,15 @@
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
 <script src="js/raphael-2.1.4.min.js"></script>
 <script src="js/justgage-1.1.0.min.js"></script>
-    <script src="js/highcharts.js"></script>
-    <script src="js/modules/exporting.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
 <link rel="stylesheet" href="css/cssmap-poland.css">
-    <link rel="stylesheet" href="css/demo.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <link rel="stylesheet" href="lib/bootgrid/jquery.bootgrid.css">
-<link rel="stylesheet" href="lib/bootstrap/bootstrap.css"> <!-- Problem z tym stylem, jego style zastępują te ze style.css -->
+<!-- <link rel="stylesheet" href="lib/bootstrap/bootstrap.css"> --> <!-- Problem z tym stylem, jego style zastępują te ze style.css -->
 <link rel="stylesheet" href="css/selectmenu.css"/>
+    <link rel="stylesheet" href="css/demo.css">
 
 <style>
 	@-webkit-viewport { width: device-width; }
@@ -116,7 +117,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
             <div class="column">
                 <div class="portlet">
                     <div class="portlet-header">Product profile</div>
-                    <div class="portlet-content" style="height:400px"><div ng-include="'partials/productprofile.html'"></div></div>
+                    <!--<div class="portlet-content" style="height:400px"><div ng-include="'partials/productprofile.html'"></div></div> -->
                 </div>
             </div>
         </div>
@@ -158,7 +159,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
             <div class="column">
                 <div class="portlet">
                     <div class="portlet-header">Relationship development</div>
-                    <div class="portlet-content"><div ng-include="'partials/chart.htm'"></div></div>
+                    <div class="portlet-content"><div ng-include="'partials/chart.html'"></div></div>
                 </div>
             </div>
         </div>
