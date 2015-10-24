@@ -74,7 +74,7 @@ padding: 0.4em;
 height: 290px;
 }
 .portlet-placeholder {
-border: 1px dashed #f00;
+border: 0.5px dotted #98bf21;
 margin: 0 1em 1em 0;
-height: 50px;
+height: 200px;
 }
