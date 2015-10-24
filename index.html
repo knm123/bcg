@@ -2,7 +2,6 @@
 <html lang="en" ng-app="myApp">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Style-Type" content="text/css">
 <title>jQuery UI Sortable - Portlets</title>
 <script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
@@ -10,16 +9,16 @@
 <script src="js/bootstrap.js"></script>
 <script src="lib/bootgrid/jquery.bootgrid.js"></script>
 <script src="lib/bootgrid/jquery.bootgrid.fa.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cssmap.js"></script>
 <script src="jquery-ui-1.11.4/jquery-1.10.2.js"></script>
 <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
 <script src="js/raphael-2.1.4.min.js"></script>
 <script src="js/justgage-1.1.0.min.js"></script>
-<script  type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.cssmap.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
 <link href="lib/bootgrid/jquery.bootgrid.css" rel="stylesheet" />
-<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" /> <!-- Problem z tym stylem, jego style zastępują te ze style.css -->
+<!--<link href="lib/bootstrap/bootstrap.css" rel="stylesheet" /> --><!-- Problem z tym stylem, jego style zastępują te ze style.css -->
 <link rel="stylesheet" href="css/selectmenu.css"/>
 <link rel="stylesheet" type="text/css" media="screen,projection" href="partials/mapa/cssmap-poland/cssmap-poland.css" />
 
@@ -35,7 +34,6 @@
 	.column .text { color: #f00 !important; }
 	.cell { font-weight: bold; }
 </style>
-    <!--
 <script>
 $(function() {
 $( ".column" ).sortable({
@@ -55,7 +53,7 @@ icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
 icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 });
 });
-</script> -->
+</script>
 </head>
 <body>
 
@@ -101,7 +99,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
             <div class="column">
                 <div class="portlet">
                     <div class="portlet-header">Address</div>
-                  <!--  <div class="portlet-content"><div ng-include="'partials/mapa/index.html'"></div></div>  --> <!--Łęczyńska 43 Lublin -->
+                    <div class="portlet-content"><div ng-include="'partials/mapa/index.html'"></div></div>  <!--Łęczyńska 43 Lublin -->
                 </div>
                 <div class="portlet">
                     <div class="portlet-header">Finances</div>
@@ -165,7 +163,6 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
     </tr>
 </table>
 
-<!--
 <script>
 var availableTags = [
 	"Klient1",
@@ -175,7 +172,7 @@ $( "#autocomplete" ).autocomplete({
 	source: availableTags
 });
 </script>
--->
+
 <script src="lib/angular/angular.js"></script>
 <script src="js/routes.js"></script>
 <script src="js/services.js"></script>
