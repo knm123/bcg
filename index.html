@@ -31,10 +31,11 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 <body>
 
 <!-- Szukaj -->
-<h2 class="demoHeaders">Autocomplete</h2>
-<div>
-	<input id="autocomplete" title="type &quot;a&quot;">
-</div>
+  <div class="form-group has-feedback">
+    <input type="text" class="form-control" id="autocomplete" title="Wpisz nazwę firmy" placeholder="Szukaj..." />
+    <i class="glyphicon"></i>
+  </div>
+<img src="icons/search.png" style="margin-left:5px" width="31px" height="31px" />
 
 <h2 class="header">Client 360 View</h2>
 
@@ -45,31 +46,31 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 	</div>
 	<div class="portlet">
 		<div class="portlet-header">Key Persons</div>
-		<div class="portlet-content"></div>
+		<div class="portlet-content"><div ng-include="'scroll/demo/index.html'"/></div>
 	</div>
 	<div class="portlet">
 		<div class="portlet-header">Sales Tip</div>
-		<div class="portlet-content"><div ng-include="'salestip.html'"/></div>
+		<!--<div class="portlet-content"><div ng-include="'salestip.html'"/></div> -->
 	</div>
 </div>
 <div class="column">
 	<div class="portlet">
 		<div class="portlet-header">Potential Assessment</div>
-		<div class="portlet-content">Lorem ipsum dolor sit amet</div>
+		<div class="portlet-content"></div>
 	</div>
 	<div class="portlet">
 		<div class="portlet-header">Risk rating</div>
-		<div class="portlet-content">Lorem ipsum dolor sit amet</div>
+		<div class="portlet-content">bla bal</div>
 	</div>
 	<div class="portlet">
 		<div class="portlet-header">Sectorial view</div>
-		<div class="portlet-content"><div ng-include="'sectorialview.html'"/></div>
+		<!--<div class="portlet-content"><div ng-include="'sectorialview.html'"/></div> -->
 	</div>
 </div>
 <div class="column">
 	<div class="portlet">
 		<div class="portlet-header">Uproduktowienie</div>
-		<div class="portlet-content"><div ng-include="'assessment.html'"/></div>
+		<div class="portlet-content"><div ng-include="'uproduktowienie.html'"/></div>
 	</div>
 	<div class="portlet">
 		<div class="portlet-header">Finances</div>
