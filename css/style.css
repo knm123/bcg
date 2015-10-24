@@ -69,8 +69,12 @@ margin-top: -8px;
 .portlet-content {
 padding: 0.4em;
 }
+.portlet-content2 {
+padding: 0.4em;
+height: 290px;
+}
 .portlet-placeholder {
-border: 1px dotted black;
+border: 1px dashed #f00;
 margin: 0 1em 1em 0;
 height: 50px;
 }
