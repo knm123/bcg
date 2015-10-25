@@ -15,7 +15,7 @@ font-size: 145.5%;
 .form-control {
   display: block;
   width: 230px;
-  height: 24px;
+  height: 34px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -66,5 +66,5 @@ font-size:125.5%;
 .portlet-placeholder {
 border: 0.5px dotted #98bf21;
 margin: 0 1em 1em 0;
-height: 200px;
+height: 100px;
 }
