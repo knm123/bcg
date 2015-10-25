@@ -63,6 +63,11 @@ display:table-cell;
 vertical-align:middle;
 font-size:125.5%;
 }
+.portlet-content2 {
+  padding: 0.5em;
+  vertical-align:middle;
+  font-size:125.5%;
+}
 .portlet-placeholder {
 border: 0.5px solid #f3f3f3;
 margin: 0 1em 1em 0;

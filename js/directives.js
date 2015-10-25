@@ -17,7 +17,7 @@ myApp.directive('inputtext', function ($timeout) {
         return {
             restrict:'E',
             replace:true,
-            template:'<div style="min-width: 310px; height: 400px; margin: 0 auto"></div>',
+            template:'<div style="min-width: 310px; height: 10px; margin: 0 auto"></div>',
             scope: {
                 //if there were attributes it would be shown here
             },
