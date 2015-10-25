@@ -13,6 +13,74 @@ myApp.directive('inputtext', function ($timeout) {
         }
     }
 })
+.directive('splinechart', function ($timeout) {
+    return {
+        restrict:'E',
+        replace:true,
+        template:'<div style="min-width: 310px; height: 400px; margin: 0 auto"></div>',
+        scope: {
+            //if there were attributes it would be shown here
+        },
+        link:function (scope, element, attrs, ctrl) {
+            $(element).highcharts({
+                chart: {
+                    type: 'spline'
+                },
+                title: {
+                    text: 'Revenue, NBI'
+                },
+                subtitle: {
+                    text: '(millions PLN)'
+                },
+                xAxis: {
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        year: '%Y'
+                    },
+                    title: {
+                        text: 'Date'
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: 'Value (millions PLN)'
+                    },
+                    min: 0
+                },
+                tooltip: {
+                    headerFormat: '<b>{series.name}</b><br />',
+                    pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+                },
+
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            enabled: true
+                        }
+                    }
+                },
+
+                series: [{
+                    name: "Revenue",
+                    data: [
+                        [Date.UTC(2012, 11, 31), 250],
+                        [Date.UTC(2013, 11, 31), 300],
+                        [Date.UTC(2014, 11, 31), 350],
+                        [Date.UTC(2015, 11, 31), 400]
+                    ]
+                }, {
+                    name: "NBI",
+                    data: [
+                        [Date.UTC(2012, 11, 31), 0.250],
+                        [Date.UTC(2013, 11, 31), 0.250],
+                        [Date.UTC(2014, 11, 31), 0.250],
+                        [Date.UTC(2015, 11, 31), 0.250]
+                    ]
+                }]
+            });
+        }
+    }
+})
 .directive('gaugechart', function ($timeout) {
     return {
         restrict:'E',
