@@ -13,6 +13,53 @@ myApp.directive('inputtext', function ($timeout) {
         }
     }
 })
+    .directive('stackedbar', function ($timeout) {
+        return {
+            restrict:'E',
+            replace:true,
+            template:'<div style="min-width: 310px; height: 10px; margin: 0 auto"></div>',
+            scope: {
+                //if there were attributes it would be shown here
+            },
+            link:function (scope, element, attrs, ctrl) {
+                $('#stack').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: 'Stacked bar chart'
+                    },
+                    xAxis: {
+                        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Total fruit consumption'
+                        }
+                    },
+                    legend: {
+                        reversed: true
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal'
+                        }
+                    },
+                    series: [{
+                        name: 'John',
+                        data: [5, 3, 4, 7, 2]
+                    }, {
+                        name: 'Jane',
+                        data: [2, 2, 3, 2, 1]
+                    }, {
+                        name: 'Joe',
+                        data: [3, 4, 4, 2, 5]
+                    }]
+                });
+            }
+        }
+    })
     .directive('map', function ($timeout) {
         return {
             restrict:'E',
@@ -162,13 +209,13 @@ myApp.directive('inputtext', function ($timeout) {
     return {
         restrict:'E',
         replace:true,
-        template:'<div style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>',
+        template:'<div style="min-width: 310px; max-width: 400px; height: 5px; margin: 0 auto"></div>',
         scope: {
             //if there were attributes it would be shown here
         },
         link:function (scope, element, attrs, ctrl) {
             // DOM manipulation may happen here.
-            $(element).highcharts({
+            $('#gauge').highcharts({
                     chart: {
                         type: 'gauge',
                         plotBackgroundColor: null,
