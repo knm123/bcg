@@ -51,7 +51,7 @@ myApp.directive('inputtext', function ($timeout) {
                         year: '%Y'
                     },
                     title: {
-                        text: 'Date'
+                        text: 'Year'
                     }
                 },
                 yAxis: {
