@@ -5,6 +5,8 @@ font-size: 44.5%;
 }
 .header {
 font-size: 195.5%;
+  color: black;
+  font-family: Droid Sans;
 }
 .has-feedback {
   position: relative;
