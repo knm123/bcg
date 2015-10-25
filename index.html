@@ -33,7 +33,7 @@
 	@-o-viewport { width: device-width; }
 	@viewport { width: device-width; }
 
-	body { padding-top: 70px; }
+	body { padding-top: 5px; }
 
 	.column .text { color: #f00 !important; }
 	.cell { font-weight: bold; }
@@ -61,19 +61,23 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 </head>
 <body>
 
-
 <table>
     <tr>
         <td>
-        <!-- Naglowek -->
         <div>
-            <!-- Szukaj -->
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control" id="autocomplete" title="Wpisz nazwę firmy" placeholder="Search" />
-                <i class="glyphicon"></i>
-            </div>
-            <img src="icons/search.png" style="margin-left:5px" width="31px" height="31px" />
+            <table>
+                <tr style="line-height:40px; vertical-align:middle">
+                    <td>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" id="autocomplete" title="Wpisz nazwę firmy" placeholder="Search" >
+                        </div>
+                    </td>
+                    <td>
+                        <img src="icons/search.png" style="margin-left:10px" width="30px" height="30px" />
+                    </td>
+                </tr>
             <h2 class="header">Client 360 View</h2>
+            </table>
         </div>
         </td>
     </tr>
