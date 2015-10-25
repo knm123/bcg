@@ -27,15 +27,15 @@ myApp.directive('inputtext', function ($timeout) {
                         type: 'bar'
                     },
                     title: {
-                        text: 'Stacked bar chart'
+                        text: 'Sales capacity'
                     },
                     xAxis: {
-                        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                        categories: ['Credit', 'Cash management', 'Leasing', 'Factoring', 'Trade finance', 'Treasury']
                     },
                     yAxis: {
                         min: 0,
                         title: {
-                            text: 'Total fruit consumption'
+                            text: 'Total'
                         }
                     },
                     legend: {
@@ -47,14 +47,26 @@ myApp.directive('inputtext', function ($timeout) {
                         }
                     },
                     series: [{
-                        name: 'John',
-                        data: [5, 3, 4, 7, 2]
+                        name: 'Sales capacity PLN',
+                        data: [100, 100, 10, 10, 5, 20],
+                        color: '#DC143C',
+                        tooltip: {
+                            valueSuffix: 'K'
+                        }
                     }, {
-                        name: 'Jane',
-                        data: [2, 2, 3, 2, 1]
+                        name: 'Q3 PLN',
+                        data: [0, 50, 0, 0, 0, 10],
+                        color: '#FFD700',
+                        tooltip: {
+                            valueSuffix: 'K'
+                        }
                     }, {
-                        name: 'Joe',
-                        data: [3, 4, 4, 2, 5]
+                        name: 'Q2 PLN',
+                        data: [200, 0, 0, 0, 0, 0],
+                        color: '#9ACD32',
+                        tooltip: {
+                            valueSuffix: 'K'
+                        }
                     }]
                 });
             }
