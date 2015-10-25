@@ -3,10 +3,13 @@ min-width: 520px;
 font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
 font-size: 44.5%;
 }
+body div.column {
+  width: 350px;
+}
 .header {
 font-size: 195.5%;
   color: black;
-  font-family: Droid Sans;
+  font-family: Lato;
 }
 .has-feedback {
   position: relative;
