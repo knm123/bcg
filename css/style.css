@@ -64,7 +64,23 @@ vertical-align:middle;
 font-size:125.5%;
 }
 .portlet-placeholder {
-border: 0.5px dotted #98bf21;
+border: 0.5px solid #f3f3f3;
 margin: 0 1em 1em 0;
 height: 100px;
+}
+.pieContainer {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+.gauge {
+  width: 450px;
+  height: 450px;
+}
+a:link.button,
+a:active.button,
+a:visited.button,
+a:hover.button {
+  margin: 30px 5px 0 2px;
+  padding: 7px 13px;
 }
