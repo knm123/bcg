@@ -22,7 +22,7 @@ myApp.directive('inputtext', function ($timeout) {
                 //if there were attributes it would be shown here
             },
             link:function (scope, element, attrs, ctrl) {
-                    $('#map-poland').cssMap({'size' : 270});
+                    $('#map-poland').cssMap({'size' : 270, 'cities': true});
             }
         }
     })
