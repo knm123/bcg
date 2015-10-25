@@ -11,9 +11,11 @@ body div.column {
   src: url(../assets/fonts/Lato2OFL/Lato-Light.ttf);
 }
 .header {
-font-size: 195.5%;
+  font-size: 195.5%;
   color: black;
-  font-family: Lato-Light;
+    margin-left:10px;
+    padding-bottom: 4px;
+    font-family: Lato-Light, serif;
 }
 .has-feedback {
   position: relative;
