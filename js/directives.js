@@ -13,6 +13,19 @@ myApp.directive('inputtext', function ($timeout) {
         }
     }
 })
+    .directive('map', function ($timeout) {
+        return {
+            restrict:'E',
+            replace:true,
+            template:'<div style="min-width: 310px; height: 400px; margin: 0 auto"></div>',
+            scope: {
+                //if there were attributes it would be shown here
+            },
+            link:function (scope, element, attrs, ctrl) {
+                    $('#map-poland').cssMap({'size' : 270});
+            }
+        }
+    })
 .directive('splinechart', function ($timeout) {
     return {
         restrict:'E',
@@ -49,7 +62,7 @@ myApp.directive('inputtext', function ($timeout) {
                 },
                 tooltip: {
                     headerFormat: '<b>{series.name}</b><br />',
-                    pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+                    pointFormat: '{point.x:%e. %b}: {point.y:.2f} M'
                 },
 
                 plotOptions: {
@@ -81,6 +94,70 @@ myApp.directive('inputtext', function ($timeout) {
         }
     }
 })
+    .directive('splineriskchart', function ($timeout) {
+        return {
+            restrict:'E',
+            replace:true,
+            template:'<div style="min-width: 310px; height: 250px; margin: 0 auto"></div>',
+            scope: {
+                //if there were attributes it would be shown here
+            },
+            link:function (scope, element, attrs, ctrl) {
+                $(element).highcharts({
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: 'Risk profile'
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        dateTimeLabelFormats: {
+                            year: "%b '%y"
+                        },
+                        title: {
+                            text: 'Date'
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Value'
+                        },
+                        min: 0.7,
+                        max: 1
+
+                    },
+                    tooltip: {
+                        headerFormat: '<b>{series.name}</b><br />',
+                        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+                    },
+
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                enabled: true
+                            }
+                        }
+                    },
+
+                    series: [{
+                        name: "Risk profile",
+                        data: [
+                            [Date.UTC(2013, 4, 31), 0.8],
+                            [Date.UTC(2013, 5, 30), 0.75],
+                            [Date.UTC(2013, 6, 31), 0.78],
+                            [Date.UTC(2013, 7, 31), 0.83],
+                            [Date.UTC(2013, 8, 30), 0.85],
+                            [Date.UTC(2013, 9, 31), 0.76]
+                        ]
+                    }]
+                });
+            }
+        }
+    })
 .directive('gaugechart', function ($timeout) {
     return {
         restrict:'E',
@@ -101,7 +178,7 @@ myApp.directive('inputtext', function ($timeout) {
                     },
 
                     title: {
-                        text: 'Speedometer'
+                        text: 'Profile chart'
                     },
 
                     pane: {
@@ -140,7 +217,7 @@ myApp.directive('inputtext', function ($timeout) {
                     // the value axis
                     yAxis: {
                         min: 0,
-                        max: 200,
+                        max: 100,
 
                         minorTickInterval: 'auto',
                         minorTickWidth: 1,
@@ -158,33 +235,34 @@ myApp.directive('inputtext', function ($timeout) {
                             rotation: 'auto'
                         },
                         title: {
-                            text: 'km/h'
+                            text: 'product ratio'
                         },
                         plotBands: [{
                             from: 0,
-                            to: 120,
+                            to: 60,
                             color: '#55BF3B' // green
                         }, {
-                            from: 120,
-                            to: 160,
+                            from: 60,
+                            to: 80,
                             color: '#DDDF0D' // yellow
                         }, {
-                            from: 160,
-                            to: 200,
+                            from: 80,
+                            to: 100,
                             color: '#DF5353' // red
                         }]
                     },
 
                     series: [{
-                        name: 'Speed',
-                        data: [80],
+                        name: 'Profile value',
+                        data: [53],
                         tooltip: {
-                            valueSuffix: ' km/h'
+                            valueSuffix: '<br />' + ' - strong profitability from core products,' + '<br />' + ' high cross-sell potential'
                         }
                     }]
 
-                },
+                });
                 // Add some life
+                /*
                 function (chart) {
                     if (!chart.renderer.forExport) {
                         setInterval(function () {
@@ -193,7 +271,7 @@ myApp.directive('inputtext', function ($timeout) {
                                 inc = Math.round((Math.random() - 0.5) * 20);
 
                             newVal = point.y + inc;
-                            if (newVal < 0 || newVal > 200) {
+                            if (newVal < 0 || newVal > 100) {
                                 newVal = point.y - inc;
                             }
 
@@ -201,7 +279,7 @@ myApp.directive('inputtext', function ($timeout) {
 
                         }, 3000);
                     }
-                });
+                }); */
         }
     }
 });
