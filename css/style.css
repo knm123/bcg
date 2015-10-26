@@ -54,9 +54,9 @@ width: 370px;
 float: left;
 padding-bottom: 10px;
 }
-.column {
+.column2 {
     width: 740px;
-    float: left;
+    height: 400px;
     padding-bottom: 10px;
 }
 .portlet {
