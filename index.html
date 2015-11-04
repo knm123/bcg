@@ -68,7 +68,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
             <table>
                 <tr class="header" colspan="2">
                     <td>
-                        <p>Client 360 View</p>
+                        <p style="margin-left:5px">Client 360 View</p>
                     </td>
                 </tr>
                 <tr style="line-height:40px; vertical-align:middle;">
@@ -87,103 +87,109 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
     </tr>
     <tr>
         <td>
-        <div id="panel1">
-            <div class="column">
-                <div class="portlet">
-                    <div class="portlet-header">Name: LUBFARM S.A.</div>
-                    <div class="portlet-content"><div ng-include="'partials/name.html'"></div></div>
-                </div>
-                <div class="portlet">
-                    <div class="portlet-header">Address</div>
-                    <div class="portlet-content2"><div ng-include="'partials/mapa/map.html'"></div></div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="portlet">
-                    <div class="portlet-header">Risk profile</div>
-                    <div class="portlet-content"><div ng-include="'partials/riskprofile.html'"></div></div>
-                </div>
-                <div class="portlet">
-                    <div class="portlet-header">Individual credit decision</div>
-                    <div class="portlet-content"><div ng-include="'partials/individualcreditdecision.html'"></div></div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="portlet">
-                    <div class="portlet-header">Finances</div>
-                    <div class="portlet-content"><div ng-include="'table/table.html'"></div></div>
-                </div>
-                <div class="portlet">
-                    <div class="portlet-header">Finances ratios</div>
-                    <div class="portlet-content"><div ng-include="'table/table2.html'"></div></div>
-                </div>
-            </div>
-        </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <div class="column2">
             <div class="portlet">
-                <div class="portlet-header">Product profile</div>
-                <div class="portlet-content">
-                    <table>
-                        <tr>
-                            <td style="vertical-align: top">
-                                <div style="margin-left:20px" ng-include="'partials/productprofile.html'"></div>
-                            </td>
-                            <td>
-                                <div style="margin-left:20px" ng-include="'partials/productprofile2.html'"></div>
-                            </td>
-                        </tr>
-                    </table>
+            <div class="portlet-header-main">Company information</div>
 
-
+                <div id="panel1">
+                    <div class="column">
+                        <div class="portlet">
+                            <div class="portlet-header">Name: LUBFARM S.A.</div>
+                            <div class="portlet-content"><div ng-include="'partials/name.html'"></div></div>
+                        </div>
+                        <div class="portlet">
+                            <div class="portlet-header">Company location</div>
+                            <div class="portlet-content2"><div ng-include="'partials/mapa/map.html'"></div></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portlet">
+                            <div class="portlet-header">Finances ratios</div>
+                            <div class="portlet-content"><div ng-include="'table/table2.html'"></div></div>
+                        </div>
+                        <div class="portlet">
+                            <div class="portlet-header">Key stakeholders</div>
+                            <div class="portlet-content"><div ng-include="'partials/keystakeholders.html'"></div></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portlet">
+                            <div class="portlet-header">Risk assessment</div>
+                            <div class="portlet-content"><div ng-include="'partials/riskprofile.html'"></div></div>
+                        </div>
+                        <div class="portlet">
+                            <div class="portlet-header">Individual credit decision</div>
+                            <div class="portlet-content"><div ng-include="'partials/individualcreditdecision.html'"></div></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
         </td>
     </tr>
     <tr>
         <td>
+            <div class="portlet">
+                <div class="portlet-header-main">Commercial potential</div>
+                <div class="column">
+                        <div class="portlet">
+                            <div class="portlet-header">Strength of relations</div>
+                                <div class="portlet-content"><div ng-include="'partials/productprofile.html'"></div></div>
+                        </div>
+                </div>
+                <div class="column">
+                    <div class="portlet">
+                        <div class="portlet-header">Strenght...</div>
+                        <div class="portlet-content"><div ng-include="'partials/productprofile2.html'"></div></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="portlet">
+                        <div class="portlet-header">Relationship development</div>
+                        <div id="tooltipRelDev" title="60% increase in relations while NBI flat over the past 4 years" class="portlet-content"><div ng-include="'partials/chart.html'"></div></div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            <div class="portlet">
+                <div class="portlet-header-main">Advisory panel</div>
+
         <div id="panel2">
             <div class="column">
                 <div class="portlet">
-                    <div class="portlet-header">Advisory panel</div>
+                    <div class="portlet-header">Useful contacts</div>
                     <div class="portlet-content"><div ng-include="'partials/advisorypanel.html'"></div></div>
                 </div>
             </div>
             <div class="column">
                 <div class="portlet">
-                    <div class="portlet-header">Sectorial trends</div>
+                    <div class="portlet-header">Sector dossier</div>
                     <div class="portlet-content"><div ng-include="'partials/sectorialtrends.html'"></div></div>
                 </div>
-            </div>
-            <div class="column">
                 <div class="portlet">
                     <div class="portlet-header">Key selling pitches</div>
                     <div class="portlet-content"><div ng-include="'partials/sellingpitches.html'"></div></div>
                 </div>
             </div>
         </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <div id="panel3">
-            <div class="column">
-                <div class="portlet">
-                    <div class="portlet-header">Key players in the market</div>
-                    <div class="portlet-content"><div ng-include="'table/keyplayers.html'"></div></div>
+                <p>Our position in the sector:</p>
+                    <div id="panel3">
+                        <div class="column">
+                            <div class="portlet">
+                                <div class="portlet-header">Key players in the market</div>
+                                <div class="portlet-content"><div ng-include="'table/keyplayers.html'"></div></div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="portlet">
+                                <div class="portlet-header">Relationships with our clients</div>
+                                <div class="portlet-content"><div ng-include="'partials/businessnetwork.html'"></div></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="portlet">
-                    <div class="portlet-header">Relationship development</div>
-                    <div id="tooltipRelDev" title="60% increase in relations while NBI flat over the past 4 years" class="portlet-content"><div ng-include="'partials/chart.html'"></div></div>
-                </div>
-            </div>
-        </div>
         </td>
     </tr>
 </table>

@@ -1,10 +1,42 @@
-<div id="tooltip">
+<div id="tooltip2">
     <p><span style="font-weight:bold">Who to liaise with:</span></p>
 
-<p title="e: marek.kowalski@mail.com | m: (+48) 669 668 667">Marek Kowalski <span style="font-weight:bold">RM BC 1 Warsaw </span></p>
-<p title="e: jakub.nowak@mail.com | m: (+48) 659 658 657">Jakub Nowak <span style="font-weight:bold">BC Manager Wrocław</span></p>
-<p title="e: andrzej.jakubiak@mail.com | m: (+48) 649 648 647">Adrzej Jakubiak <span style="font-weight:bold">Product Specialist Warsaw</span></p>
-    <script>
-        $( "#tooltip" ).tooltip();
-    </script>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <table id="grid" class="table table-condensed table-hover table-striped" data-selection="true" data-multi-select="true" data-row-select="true" data-keep-selection="true">
+                        <thead>
+                        <tr>
+                            <th data-column-id="id" data-identifier="true" data-type="numeric" data-align="right" data-width="40">No.</th>
+                            <th data-column-id="sender" data-order="asc" data-align="center" data-header-align="center" data-width="75%">Name</th>
+                            <th style="data-column-id="received" data-css-class="cell" data-header-css-class="column"  data-filterable="true">Function</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><p title="e: marek.kowalski@mail.com | m: (+48) 669 668 667">Marek Kowalski</p></td>
+                            <td><span style="font-weight:bold">RM BC 1 Warsaw </span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><p title="e: jakub.nowak@mail.com | m: (+48) 659 658 657">Jakub Nowak</p></td>
+                            <td><span style="font-weight:bold">BC Manager Wrocław</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><p title="e: andrzej.jakubiak@mail.com | m: (+48) 649 648 647">Adrzej Jakubiak</p></td>
+                            <td><span style="font-weight:bold">Product Specialist Warsaw</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--/div-->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+    $( "#tooltip2" ).tooltip();
+</script>

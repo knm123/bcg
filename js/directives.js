@@ -47,23 +47,16 @@ myApp.directive('inputtext', function ($timeout) {
                         }
                     },
                     series: [{
-                        name: 'Sales capacity PLN',
+                        name: 'Potential',
                         data: [100, 100, 10, 10, 5, 20],
                         color: '#DC143C',
                         tooltip: {
                             valueSuffix: 'K'
                         }
                     }, {
-                        name: 'Q3 PLN',
+                        name: 'Actual',
                         data: [0, 50, 0, 0, 0, 10],
                         color: '#FFD700',
-                        tooltip: {
-                            valueSuffix: 'K'
-                        }
-                    }, {
-                        name: 'Q2 PLN',
-                        data: [200, 0, 0, 0, 0, 0],
-                        color: '#9ACD32',
                         tooltip: {
                             valueSuffix: 'K'
                         }
@@ -99,10 +92,10 @@ myApp.directive('inputtext', function ($timeout) {
                     type: 'spline'
                 },
                 title: {
-                    text: 'Revenue, NBI'
+                    text: 'Growth of Revenue and NBI'
                 },
                 subtitle: {
-                    text: '(millions PLN)'
+                    text: 'Revenue - millions PLN, <br /> NBI - thousands PLN'
                 },
                 xAxis: {
                     type: 'datetime',
@@ -115,7 +108,7 @@ myApp.directive('inputtext', function ($timeout) {
                 },
                 yAxis: {
                     title: {
-                        text: 'Value (millions PLN)'
+                        text: 'Value (millions, thousands PLN)'
                     },
                     min: 0
                 },
@@ -143,10 +136,10 @@ myApp.directive('inputtext', function ($timeout) {
                 }, {
                     name: "NBI",
                     data: [
-                        [Date.UTC(2012, 11, 31), 0.250],
-                        [Date.UTC(2013, 11, 31), 0.250],
-                        [Date.UTC(2014, 11, 31), 0.250],
-                        [Date.UTC(2015, 11, 31), 0.250]
+                        [Date.UTC(2012, 11, 31), 250],
+                        [Date.UTC(2013, 11, 31), 250],
+                        [Date.UTC(2014, 11, 31), 250],
+                        [Date.UTC(2015, 11, 31), 250]
                     ]
                 }]
             });
@@ -237,7 +230,7 @@ myApp.directive('inputtext', function ($timeout) {
                     },
 
                     title: {
-                        text: 'Profile chart'
+                        text: 'Percentage of NBI potential'
                     },
 
                     pane: {
@@ -294,7 +287,7 @@ myApp.directive('inputtext', function ($timeout) {
                             rotation: 'auto'
                         },
                         title: {
-                            text: 'product ratio'
+                            text: ''
                         },
                         plotBands: [{
                             from: 0,
@@ -313,7 +306,7 @@ myApp.directive('inputtext', function ($timeout) {
 
                     series: [{
                         name: 'Profile value',
-                        data: [53],
+                        data: [70],
                         tooltip: {
                             valueSuffix: '<br />' + ' - strong profitability from core products,' + '<br />' + ' high cross-sell potential'
                         }
