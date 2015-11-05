@@ -13,6 +13,9 @@ myApp.directive('inputtext', function ($timeout) {
         }
     }
 })
+
+
+
     .directive('stackedbar', function ($timeout) {
         return {
             restrict:'E',
@@ -27,7 +30,7 @@ myApp.directive('inputtext', function ($timeout) {
                         type: 'bar'
                     },
                     title: {
-                        text: 'Sales capacity'
+                        text: 'Sales capacity per product'
                     },
                     xAxis: {
                         categories: ['Credit', 'Cash management', 'Leasing', 'Factoring', 'Trade finance', 'Treasury']
@@ -49,14 +52,14 @@ myApp.directive('inputtext', function ($timeout) {
                     series: [{
                         name: 'Potential',
                         data: [100, 100, 10, 10, 5, 20],
-                        color: '#DC143C',
+                        color: '#18a97d',
                         tooltip: {
                             valueSuffix: 'K'
                         }
                     }, {
                         name: 'Actual',
                         data: [0, 50, 0, 0, 0, 10],
-                        color: '#FFD700',
+                        color: '#434348',
                         tooltip: {
                             valueSuffix: 'K'
                         }
@@ -78,6 +81,168 @@ myApp.directive('inputtext', function ($timeout) {
             }
         }
     })
+    .directive('columnchart', function ($timeout) {
+        return {
+            restrict: 'E',
+            replace: true,
+            template: '<div style="min-width: 310px; height: 370px; margin: 0 auto"></div>',
+            scope: {
+                //if there were attributes it would be shown here
+            },
+            link: function (scope, element, attrs, ctrl) {
+                $(element).highcharts({
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['W/C Loans', 'Inv. Loans', 'Factoring', 'Leasing']
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Total fruit consumption'
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                            }
+                        }
+                    },
+                    legend: {
+                        align: 'center',
+                        x: -20,
+                        verticalAlign: 'top',
+                        y: -10,
+                        floating: true,
+                        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                        borderColor: '#CCC',
+                        borderWidth: 1,
+                        shadow: false
+                    },
+                    tooltip: {
+                        headerFormat: '<b>{point.x}</b><br/>',
+                        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                    },
+                    plotOptions: {
+                        column: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                style: {
+                                    textShadow: '0 0 3px black'
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Available',
+                        data: [6, 3, 1, 1]
+                    }, {
+                        name: 'Used',
+                        data: [1, 1, 0, 0]
+                    }]
+                });
+            }
+        }
+    })
+
+    .directive('matrixchart', function ($timeout) {
+        return {
+            restrict: 'E',
+            replace: true,
+            template: '<div style="min-width: 310px; height: 370px; margin: 0 auto"></div>',
+            scope: {
+                //if there were attributes it would be shown here
+            },
+            link: function (scope, element, attrs, ctrl) {
+                $(element).highcharts({
+
+                    chart: {
+                        type: 'boxplot'
+                    },
+
+                    title: {
+                        text: ''
+                    },
+
+                    legend: {
+                        enabled: false
+                    },
+
+                    xAxis: {
+                        min: 0,
+                        max: 4,
+                        categories: ['1', '2', '3', '4', '5'],
+                        title: {
+                            text: 'EBIT Margin (LTM, %)'
+                        },
+                        plotLines: [{
+                            value: 2,
+                            color: 'gray',
+                            width: 1,
+                            label: {
+                                align: 'center',
+                                style: {
+                                    color: 'gray'
+                                }
+                            }
+                        }]
+                    },
+
+                    yAxis: {
+                        min: 0,
+                        max: 100,
+                        title: {
+                            text: 'Leverage'
+                        },
+                        plotLines: [{
+                            value: 55,
+                            color: 'gray',
+                            width: 1,
+                            label: {
+                                text: 'Sector',
+                                align: 'left',
+                                style: {
+                                    color: 'gray'
+                                }
+                            }
+                        }]
+                    },
+
+                    series: [{
+                        name: 'Observations',
+                        data: [],
+                        tooltip: {
+                            headerFormat: '<em>Experiment No {point.key}</em><br/>'
+                        }
+                    }, {
+                        name: 'Lubfarm S.A.',
+                        color: Highcharts.getOptions().colors[0],
+                        type: 'scatter',
+                        data: [ // x, y positions where 0 is the first category
+                            [4, 40]
+                        ],
+                        marker: {
+                            fillColor: 'white',
+                            lineWidth: 1,
+                            lineColor: Highcharts.getOptions().colors[0]
+                        },
+                        tooltip: {
+                            pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
+                        }
+                    }]
+
+                });
+            }
+        }
+    })
+
 .directive('splinechart', function ($timeout) {
     return {
         restrict:'E',
@@ -230,7 +395,7 @@ myApp.directive('inputtext', function ($timeout) {
                     },
 
                     title: {
-                        text: 'Percentage of NBI potential'
+                        text: 'Sales capacity in NBI'
                     },
 
                     pane: {
@@ -240,8 +405,8 @@ myApp.directive('inputtext', function ($timeout) {
                             backgroundColor: {
                                 linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
                                 stops: [
-                                    [0, '#FFF'],
-                                    [1, '#333']
+                                    [0, '#dfdfdf'],
+                                    [1, '#dedede']
                                 ]
                             },
                             borderWidth: 0,
@@ -250,19 +415,19 @@ myApp.directive('inputtext', function ($timeout) {
                             backgroundColor: {
                                 linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
                                 stops: [
-                                    [0, '#333'],
-                                    [1, '#FFF']
+                                    [0, '#ddd'],
+                                    [1, '#eee']
                                 ]
                             },
                             borderWidth: 1,
-                            outerRadius: '107%'
+                            outerRadius: '99%'
                         }, {
                             // default background
                         }, {
-                            backgroundColor: '#DDD',
+                            backgroundColor: '#dedede',
                             borderWidth: 0,
-                            outerRadius: '105%',
-                            innerRadius: '103%'
+                            outerRadius: '15%',
+                            innerRadius: '13%'
                         }]
                     },
 
@@ -292,15 +457,15 @@ myApp.directive('inputtext', function ($timeout) {
                         plotBands: [{
                             from: 0,
                             to: 60,
-                            color: '#55BF3B' // green
+                            color: '#DF5353' // red
                         }, {
                             from: 60,
                             to: 80,
-                            color: '#DDDF0D' // yellow
+                            color: '#e6e600' // '#DDDF0D' // yellow
                         }, {
                             from: 80,
                             to: 100,
-                            color: '#DF5353' // red
+                            color: '#18a97d' // '#55BF3B' // green
                         }]
                     },
 
@@ -308,8 +473,10 @@ myApp.directive('inputtext', function ($timeout) {
                         name: 'Profile value',
                         data: [70],
                         tooltip: {
-                            valueSuffix: '<br />' + ' - strong profitability from core products,' + '<br />' + ' high cross-sell potential'
+                            noTooltip: true
                         }
+                        //    valueSuffix: '<br />' + ' - strong profitability from core products,' + '<br />' + ' high cross-sell potential'
+                        //}
                     }]
 
                 });

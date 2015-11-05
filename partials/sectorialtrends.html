@@ -1,15 +1,98 @@
 <div>
-<div id="accordionSectorialTrends">
-	<h3>Increase in public spending</h3>
-	<div>Due to cuts in public reimbursement share of public spending on drugs increasing.</div>
-	<h3>High growth of pharma market</h3>
-	<div>Overall high growth of pharma market of 10% in the past year driven by network pharmacies.</div>
-	<h3>Boom on diet supplements market</h3>
-	<div>Pharmacies increasing stock of supplements due to high customer demand.</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9">
+				<table id="grid" class="table table-condensed table-hover table-striped" data-selection="true" data-multi-select="true" data-row-select="true" data-keep-selection="true">
+					<thead>
+					<tr>
+						<th data-column-id="id" data-identifier="true" data-type="numeric" data-align="right" data-width="40">No.</th>
+						<th data-column-id="sender" data-order="asc" data-align="center" data-header-align="center" data-width="45%">Trend</th>
+						<th style="text-align:right" data-column-id="received" data-css-class="cell" data-header-css-class="column" data-align="right"  data-filterable="true">Direction</th>
+						<th style="text-align:right" data-column-id="received" data-css-class="cell" data-header-css-class="column" data-align="right"  data-filterable="true">Insight</th>
+					</tr>
+					</thead>
+					<tbody>
+
+
+					<tr>
+						<td>1</td>
+						<td>
+							<div id="q1" class="question">Increase in public spending</div>
+							<div id="a1" class="answer">Due to cuts in public reimbursement share of public spending on drugs increasing.</div>
+						</td>
+						<td style="text-align:center; color:#00CC00">&#8599;</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							<div id="q2" class="question">High growth of pharma market</div>
+							<div id="a2" class="answer">Overall high growth of pharma market of 10% in the past year driven by network pharmacies.</div>
+
+						</td>
+						<td style="text-align:center; color:#00CC00">&#8599;</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							<div id="q3" class="question">Boom on diet supplements market</div>
+							<div id="a3" class="answer">Pharmacies increasing stock of supplements due to high customer demand.</div>
+						</td>
+						<td style="text-align:center; color:#00CC00">&#8599;</td>
+						<td>TBD</td>
+					</tr>
+					</tbody>
+				</table>
+				<!--/div-->
+			</div>
+		</div>
+	</div>
 </div>
-	<script>
 
-$( "#accordionSectorialTrends" ).accordion();
+<style type="text/css">
 
+	/* Layout properties for your question  */
+	.question{
+		font-weight:bold;	/* Bold font */
+		cursor:pointer;
+	}
+
+	.answer{
+		/* Layout properties - You can change these */
+
+		padding:3px;
+
+		/* This one should not be changed */
+		display:none;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+	function showHideAnswer()
+	{
+		var numericID = this.id.replace(/[^\d]/g,'');
+		var obj = document.getElementById('a' + numericID);
+		if(obj.style.display=='block'){
+			obj.style.display='none';
+		}else{
+			obj.style.display='block';
+		}
+	}
+
+
+	function initShowHideContent()
+	{
+		var divs = document.getElementsByTagName('DIV');
+		for(var no=0;no<divs.length;no++){
+			if(divs[no].className=='question'){
+				divs[no].onclick = showHideAnswer;
+			}
+
+		}
+	}
+
+	window.onload = initShowHideContent;
 </script>
-</div>
