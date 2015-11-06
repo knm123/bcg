@@ -1,0 +1,13 @@
+﻿{
+    "nodes":[
+      {"short":"Grupa Azoty S.A.", "name":"Grupa Azoty S.A.","width":85,"height":85},
+      {"short":"WSSwL","name":"Wojewódzki Szpital Specjalistyczny w Lublinie","width":50,"height":50},
+      {"short":"LUBFARM S.A.","name":"LUBFARM S.A.","width":90,"height":90},
+      {"short":"CEFARM S.A.","name":"CEFARM S.A.","width":70,"height":70}
+    ],
+    "links":[
+      {"source":0,"target":2},
+      {"source":1,"target":2},
+      {"source":3,"target":2}
+    ]
+}

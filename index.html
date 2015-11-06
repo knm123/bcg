@@ -18,6 +18,8 @@
 <script src="js/Highcharts-4.1.9/highcharts.js"></script>
 <script src="js/Highcharts-4.1.9/highcharts-more.js"></script>
 <script src="js/Highcharts-4.1.9/modules/exporting.js"></script>
+<script src="js/cola.min.js"></script>
+<script src="js/d3.v3.js"></script>
 <script src="js/jquery.cssmap.js"></script>
 <link rel="stylesheet" href="css/cssmap-poland.css">
 <link rel="stylesheet" href="css/style.css">
@@ -72,7 +74,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
                 <tr style="line-height:40px; vertical-align:middle;">
                     <td>
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" id="autocomplete" title="Type company name here" placeholder="Search" >
+                            <input type="text" class="form-control" id="autocomplete" title="Type company name here" placeholder="Search" />
                         </div>
                     </td>
                     <td>
@@ -107,6 +109,10 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
                         <div class="portlet">
                             <div class="portlet-header">Other information</div>
                             <div class="portlet-content"><div ng-include="'partials/otherinformation.html'"></div></div>
+                        </div>
+                        <div class="portlet">
+                            <div class="portlet-header">RM's notes</div>
+                            <div class="portlet-content"><div ng-include="'partials/notes.html'"></div></div>
                         </div>
                     </div>
                 </div>
@@ -185,7 +191,7 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
                 </div>
                 <div class="column">
                     <div class="portlet">
-                        <div class="portlet-header">Strenght...</div>
+                        <div class="portlet-header">Product potential</div>
                         <div class="portlet-content"><div ng-include="'partials/productprofile2.html'"></div></div>
                     </div>
                 </div>

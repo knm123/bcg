@@ -68,6 +68,7 @@ myApp.directive('inputtext', function ($timeout) {
             }
         }
     })
+
     .directive('map', function ($timeout) {
         return {
             restrict:'E',
@@ -216,7 +217,7 @@ myApp.directive('inputtext', function ($timeout) {
                     },
 
                     series: [{
-                        name: 'Observations',
+                        name: 'Our company',
                         data: [],
                         tooltip: {
                             headerFormat: '<em>Experiment No {point.key}</em><br/>'
@@ -236,7 +237,96 @@ myApp.directive('inputtext', function ($timeout) {
                         tooltip: {
                             pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
                         }
-                    }]
+                    },
+                        {
+                        name: 'Company from sector',
+                        data: [],
+                        tooltip: {
+                            headerFormat: '<em>Experiment No {point.key}</em><br/>'
+                        }
+                    }, {
+                        name: 'Polpharma',
+                        color: Highcharts.getOptions().colors[0],
+                        type: 'scatter',
+                        data: [ // x, y positions where 0 is the first category
+                            [3, 71]
+                        ],
+                        marker: {
+                            fillColor: '#bbb',
+                            lineColor: Highcharts.getOptions().colors[0]
+                        },
+                        tooltip: {
+                            pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
+                        }
+                    },
+                        {
+                            name: 'Company from sector',
+                            data: [],
+                            tooltip: {
+                                headerFormat: '<em>Experiment No {point.key}</em><br/>'
+                            }
+                        }, {
+                            name: 'Tarchomin',
+                            color: Highcharts.getOptions().colors[0],
+                            type: 'scatter',
+                            data: [ // x, y positions where 0 is the first category
+                                [0.5, 78]
+                            ],
+                            marker: {
+                                fillColor: '#bbb',
+                                lineColor: Highcharts.getOptions().colors[0]
+                            },
+                            tooltip: {
+                                pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
+                            }
+                        },
+                        {
+                            name: 'Company from sector',
+                            data: [],
+                            tooltip: {
+                                headerFormat: '<em>Experiment No {point.key}</em><br/>'
+                            }
+                        }, {
+                            name: 'Colfarm',
+                            color: Highcharts.getOptions().colors[0],
+                            type: 'scatter',
+                            data: [ // x, y positions where 0 is the first category
+                                [1.85, 47]
+                            ],
+                            marker: {
+                                fillColor: '#bbb',
+                                lineColor: Highcharts.getOptions().colors[0]
+                            },
+                            tooltip: {
+                                pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
+                            }
+                        },
+                        {
+                            name: 'Company from sector',
+                            data: [],
+                            tooltip: {
+                                headerFormat: '<em>Experiment No {point.key}</em><br/>'
+                            }
+                        }, {
+                            name: 'Teva',
+                            color: Highcharts.getOptions().colors[0],
+                            type: 'scatter',
+                            data: [ // x, y positions where 0 is the first category
+                                [0.7, 55]
+                            ],
+                            marker: {
+                                fillColor: '#bbb',
+                                lineColor: Highcharts.getOptions().colors[0]
+                            },
+                            tooltip: {
+                                pointFormat: 'Leverage: {point.y} | EBIT Margin: {point.x}'
+                            }
+                        }
+
+
+
+
+                    ]
 
                 });
             }
