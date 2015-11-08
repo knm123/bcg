@@ -104,7 +104,7 @@ myApp.directive('inputtext', function ($timeout) {
                     yAxis: {
                         min: 0,
                         title: {
-                            text: 'Total fruit consumption'
+                            text: 'Lending potential'
                         },
                         stackLabels: {
                             enabled: true,
